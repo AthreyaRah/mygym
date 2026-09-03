@@ -4,9 +4,14 @@ A free, offline-capable web app to **search exercises**, **watch the animation a
 posture** for each one, and **build your own workout routines** — all from your
 phone. Hosts on GitHub Pages at zero cost, no server or database.
 
-Inspired by [opengym](https://github.com/mixrecords/opengym); exercise data comes
-from [hasaneyldrm/exercises-dataset](https://github.com/hasaneyldrm/exercises-dataset)
-(1,324 exercises with animated GIFs).
+Inspired by [opengym](https://github.com/mixrecords/opengym). Exercise data is
+merged from two open datasets:
+
+- [hasaneyldrm/exercises-dataset](https://github.com/hasaneyldrm/exercises-dataset)
+  — 1,324 exercises with animated GIFs (© Gym visual)
+- [yuhonas/free-exercise-db](https://github.com/yuhonas/free-exercise-db)
+  — 750×500 public-domain posture photos, shown on exercises whose names match
+  (~200 of them)
 
 ## Features
 
@@ -63,6 +68,15 @@ the update, which triggers a redeploy.
 ## Data & licensing
 
 - App code and the derived JSON: MIT (see `LICENSE`).
-- Exercise images/animations: © [Gym visual](https://gymvisual.com/), loaded at
-  runtime from the upstream repository via jsDelivr — not redistributed here.
-  Attribution is shown on every exercise page.
+- Animations: © [Gym visual](https://gymvisual.com/), loaded at runtime from the
+  upstream repo via jsDelivr — not redistributed here. Attribution shown on every
+  exercise page.
+- Posture photos: [free-exercise-db](https://github.com/yuhonas/free-exercise-db),
+  public domain (Unlicense), also hot-linked via jsDelivr.
+
+### Want sharper animations?
+
+The GIFs are the free 180px tier of the Gym visual artwork. A one-time paid
+option ([Vital Animations](https://github.com/exercisedb-pro/exercisedb-dataset),
+~$49) provides 1080p HD looping MP4s you can self-host — swap the `gif` field and
+`AnimatedGif` component to use them.
