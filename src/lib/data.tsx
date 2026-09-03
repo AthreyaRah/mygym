@@ -9,14 +9,22 @@ import {
 import Fuse from "fuse.js";
 import type { Exercise, Facets, Meta } from "./types";
 
-const MEDIA_CDN =
-  "https://cdn.jsdelivr.net/gh/hasaneyldrm/exercises-dataset@main/";
+const GIF_CDN = "https://cdn.jsdelivr.net/gh/hasaneyldrm/exercises-dataset@main/";
+const PHOTO_CDN =
+  "https://cdn.jsdelivr.net/gh/yuhonas/free-exercise-db@main/exercises/";
 
-/** Resolve an upstream relative media path to a CDN URL. */
+/** Resolve a relative GIF/thumbnail path to a CDN URL. */
 export function mediaUrl(path: string): string {
   if (!path) return "";
   if (/^https?:\/\//.test(path)) return path;
-  return MEDIA_CDN + path.replace(/^\/+/, "");
+  return GIF_CDN + path.replace(/^\/+/, "");
+}
+
+/** Resolve a relative posture-photo path (free-exercise-db) to a CDN URL. */
+export function photoUrl(path: string): string {
+  if (!path) return "";
+  if (/^https?:\/\//.test(path)) return path;
+  return PHOTO_CDN + path.replace(/^\/+/, "");
 }
 
 interface DataBundle {

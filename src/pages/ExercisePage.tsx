@@ -1,6 +1,6 @@
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { useData } from "../lib/data";
-import { AnimatedGif } from "../components/Media";
+import { AnimatedGif, PosturePhotos } from "../components/Media";
 import { AddToRoutineButton } from "../components/AddToRoutineButton";
 import { EmptyState, Spinner } from "../components/ui";
 
@@ -41,6 +41,8 @@ export default function ExercisePage() {
 
       <AnimatedGif exercise={exercise} />
 
+      <PosturePhotos exercise={exercise} />
+
       <div className="flex flex-wrap gap-2">
         <Badge>{exercise.bodyPart}</Badge>
         <Badge>{exercise.equipment}</Badge>
@@ -80,8 +82,14 @@ export default function ExercisePage() {
 
       <AddToRoutineButton exerciseId={exercise.id} />
 
-      <p className="pt-2 text-center text-[11px] text-slate-600">
+      <p className="pt-2 text-center text-[11px] leading-relaxed text-slate-600">
         Animation {exercise.attribution}
+        {exercise.photos.length > 0 && (
+          <>
+            <br />
+            Photos: free-exercise-db (public domain)
+          </>
+        )}
       </p>
     </div>
   );

@@ -10,6 +10,8 @@ export interface Exercise {
   steps: string[];
   image: string;
   gif: string;
+  /** posture photos from free-exercise-db (relative paths), may be empty */
+  photos: string[];
   attribution: string;
 }
 

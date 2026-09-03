@@ -1,7 +1,13 @@
 {
   "count": 1324,
-  "generatedAt": "2026-09-03T16:02:50.078Z",
-  "source": "https://github.com/hasaneyldrm/exercises-dataset",
-  "mediaCdn": "https://cdn.jsdelivr.net/gh/hasaneyldrm/exercises-dataset@main/",
-  "mediaAttribution": "© Gym visual — https://gymvisual.com/"
+  "photosMatched": 201,
+  "generatedAt": "2026-09-03T16:30:40.958Z",
+  "sources": [
+    "https://github.com/hasaneyldrm/exercises-dataset",
+    "https://github.com/yuhonas/free-exercise-db"
+  ],
+  "gifCdn": "https://cdn.jsdelivr.net/gh/hasaneyldrm/exercises-dataset@main/",
+  "photoCdn": "https://cdn.jsdelivr.net/gh/yuhonas/free-exercise-db@main/exercises/",
+  "gifAttribution": "© Gym visual — https://gymvisual.com/",
+  "photoAttribution": "free-exercise-db (public domain)"
 }
